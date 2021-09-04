@@ -23,6 +23,6 @@ def last_buy_nice(request):
     return render(request, 'last_buy.html', context={'data': res})
 
 
-def charts(request, data_id):
+def charts(request, data_id, name):
     res = get_charts(data_id)
-    return render(request, 'charts.html', context={'data': res})
+    return render(request, 'charts.html', context={'data': res, 'name': name})
