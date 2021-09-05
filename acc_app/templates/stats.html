@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Цикличность действий, кейс accenture</title>
+</head>
+<body>
+<h3 align="center">Цикличность действий, кейс accenture</h3>
+<h2>Статистика компании</h2>
+<table align="center">
+    <tr bgcolor="8888ee">
+  {% for name in naming %}
+        <th>{{ name }}</th>
+        {% endfor %}
+    </tr>
+  {% for line in data %}
+    <tr class="block">
+        <td>{{ line.name }}</td>
+        <td>{{ line.val1 }}</td>
+        <td>{{ line.val2 }}</td>
+        <td>{{ line.val3 }}</td>
+        <td>{{ line.val4 }}</td>
+    </tr>
+  {% endfor %}
+</table>
+<script>
+for (var i = 0; i<document.getElementsByClassName("block").length; i++) {
+console.log(i);
+document.getElementsByClassName("block")[i].onmouseover = function() {
+    this.style.backgroundColor = "#aaeeaa";
+}
+document.getElementsByClassName("block")[i].onmouseleave = function() {
+    this.style.backgroundColor = "";
+}
+<!--document.getElementsByClassName("block")[i].onclick = function() {-->
+<!--console.log(location.href + "stats{{ line.link }}");-->
+<!--    location.href = location.href + "stats{{ line.link }}";-->
+<!--}-->
+}
+</script>
+</body>
+</html>

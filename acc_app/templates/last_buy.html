@@ -24,24 +24,8 @@
         <td>{{ line.last }}</td>
         <td>{{ line.max_price }}</td>
         <td>{{ line.min_price }}</td>
-        <td>
-            {% if line.change > 0.0 %}
-                <font color="green">
-            {% else %}
-                <font color="red">
-            {% endif%}
-            {{ line.change }}
-        </td>
-            <font color="black">
-        <td>
-            {% if line.perc_change > 0.0 %}
-                <font color="green">
-            {% else %}
-                <font color="red">
-            {% endif%}
-            {{ line.perc_change }}
-        </td>
-            <font color="black">
+        <td>{{ line.change }}</td>
+        <td>{{ line.perc_change }}</td>
         <td>{{ line.amount }}</td>
         <td>{{ line.data_time }}</td>
         <td><a href="charts/{{ line.data_id }}">Данные</a></td>
